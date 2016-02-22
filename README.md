@@ -1,4 +1,4 @@
-## Teamspeak-Info
+## SAMP-API
 Diese APP benötigt folgende **Umgebungsvariablen**:
 
 #### `PORT`
