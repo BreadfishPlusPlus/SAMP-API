@@ -7,7 +7,7 @@ Der HTTP-Port über den man die APP erreichen soll. Kein Standartwert.
 #### `DEBUG`
 Siehe [debug](https://github.com/visionmedia/debug).
 Standardwert ist `*` (Alles).
-Gültige Werte sind: `webserver` & `teamspeak`.
+Gültige Werte sind: `api`.
 
 ## License
 The MIT License (MIT)
