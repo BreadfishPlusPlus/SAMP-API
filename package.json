@@ -1,0 +1,45 @@
+{
+  "name": "SAMP-API",
+  "version": "1.0.0",
+  "description": "Breadfish++ SAMP API",
+  "main": "build/index.js",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BreadfishPlusPlus/SAMP-API.git"
+  },
+  "author": "Martin Rump",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BreadfishPlusPlus/SAMP-API/issues"
+  },
+  "homepage": "https://github.com/BreadfishPlusPlus/SAMP-API",
+  "engines": {
+    "node": "5.6.x",
+    "npm": "3.7.x"
+  },
+  "scripts": {
+    "start": "node build/index.js",
+    "clean": "rm -rf build/ > /dev/null 2>&1",
+    "build": "babel src --out-dir build",
+    "postinstall": "npm run clean -s && npm run build"
+  },
+  "dependencies": {
+    "apicache": "0.0.12",
+    "babel-cli": "^6.5.1",
+    "babel-plugin-transform-async-to-generator": "^6.5.0",
+    "babel-plugin-transform-es2015-destructuring": "^6.5.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.5.2",
+    "babel-plugin-transform-es2015-parameters": "^6.5.0",
+    "bluebird": "^3.3.1",
+    "debug": "^2.2.0",
+    "express": "^4.13.4",
+    "request-ip": "^1.2.2",
+    "samp-query": "^0.1.5",
+    "validator": "^5.0.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^4.1.8",
+    "eslint": "^1.10.3"
+  }
+}

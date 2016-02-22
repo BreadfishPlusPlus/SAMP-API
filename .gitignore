@@ -1,0 +1,4 @@
+node_modules/
+*.sublime-*
+build/*
+test.sh
