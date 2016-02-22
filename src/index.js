@@ -21,13 +21,16 @@ const start = async () => {
     webserver.set("trust proxy", true);
     webserver.set("x-powered-by", false);
 
-    webserver.use(apicache("5 minutes"));
-
-    webserver.use(async (req, res) => {
+    webserver.use(async (req, res, next) => {
         res.header("Access-Control-Allow-Origin", "*");
         res.header("Access-Control-Expose-Headers", "Content-Type");
         debug(`serving reqeust ${req.url} from ${getClientIp(req)}`);
+        next();
+    });
 
+    webserver.use(apicache("5 minutes"));
+
+    webserver.use(async (req, res) => {
         try {
             let {host, port} = req.query;
 
